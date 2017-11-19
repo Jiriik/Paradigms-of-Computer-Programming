@@ -1,0 +1,11 @@
+declare
+fun {IsList Xs}
+   case Xs of _|Xr then {IsList Xr} [] nil then true else false end
+end
+{Browse {IsList a|b}}
+{Browse {IsList a|b|nil}}
+{Browse {IsList nil|b|a}}
+{Browse {IsList (a|b)|nil}}
+{Browse {IsList a|(b|nil)}}
+{Browse {IsList (nil|b)|a}}
+{Browse {IsList nil|(b|a)}}
